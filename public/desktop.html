@@ -15,29 +15,26 @@
   </head>
 
   <body class="container">
-    <h1 class="mt-5">Queue program</h1>
-
+    <h1 class="mt-5">Desktop</h1>
+    <hr />
     <div class="row">
-      <div class="col-6">
-        <a class="btn btn-primary" href="public.html">Public Screen</a>
-        <a class="btn btn-secondary" href="new-ticket.html">Create tickets</a>
+      <div class="col-8">
+        <h4>Attending <small class="text-primary">....</small></h4>
+
+        <button class="btn btn-primary mt-5">Next ticket in queue</button>
       </div>
 
-      <div class="col-6">
-        <form action="desktop.html">
-          <input
-            name="desktop"
-            type="text"
-            class="form-control"
-            placeholder="Desktop"
-            autofocus
-            required
-          />
+      <div class="col-4 text-center">
+        <h4>In queue</h4>
 
-          <br />
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="alert alert-info mt-2">
+          <span>There's no more tickets here</span>
+        </div>
+
+        <h1 id="pendingTickets">10</h1>
       </div>
     </div>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/desktop.js"></script>
   </body>
 </html>
